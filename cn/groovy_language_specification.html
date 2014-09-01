@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.0.preview.7">
-<title>Groovy Language Documentation</title>
+<title>Groovy语言文档</title>
 <link rel="stylesheet" href="../assets/css/style.css">
 <link rel="stylesheet" href="../font-awesome.min.css">
 <link rel="stylesheet" href="../prettify.min.css">
@@ -26,28 +26,24 @@ border-right-color: #333333;border-bottom-color: #333333;border-left-color: #333
 
 <div id="header">
 <div id="toc" class="toc2">
-<div id="toctitle">Table of Contents</div>
+<div id="toctitle">目录</div>
 
 <ul class="sectlevel0">
-	<li><a href="index.html">&lt;&lt;Back</a></li>
+	<li><a href="index.html">&lt;&lt;返回</a></li>
 	<li>
 		<ul class="sectlevel1">
-			<li><a href="groovy_language_specification.html#_groovy_language_specification">1.
-					Groovy Language Specification</a></li>
+			<li><a href="groovy_language_specification.html#_groovy_language_specification">1. Groovy语言规范</a></li>
 			<li>
 				<ul class="sectlevel2">
-					<li><a href="groovy_language_specification.html#_syntax">1.1. Syntax</a></li>
+					<li><a href="groovy_language_specification.html#_syntax">1.1. 语法</a></li>
 					<li>
 						<ul class="sectlevel3">
-							<li><a href="groovy_language_specification.html#_comments">1.1.1. Comments</a></li>
+							<li><a href="groovy_language_specification.html#_comments">1.1.1. 注释</a></li>
 							<li>
 								<ul class="sectlevel4">
-									<li><a href="groovy_language_specification.html#_single_line_comment">Single
-											line comment</a></li>
-									<li><a href="groovy_language_specification.html#_multiline_comment">Multiline
-											comment</a></li>
-									<li><a href="groovy_language_specification.html#_groovydoc_comment">GroovyDoc
-											comment</a></li>
+									<li><a href="groovy_language_specification.html#_single_line_comment">单行注释</a></li>
+									<li><a href="groovy_language_specification.html#_multiline_comment">多行注释</a></li>
+									<li><a href="groovy_language_specification.html#_groovydoc_comment">GroovyDoc注释</a></li>
 									<li><a href="groovy_language_specification.html#_shebang_line">Shebang line</a></li>
 								</ul>
 							</li>
@@ -782,22 +778,22 @@ border-right-color: #333333;border-bottom-color: #333333;border-left-color: #333
 <div id="content">
 
 <div class="sect1">
-<h2 id="_groovy_language_specification">1. Groovy Language Specification</h2>
+<h2 id="_groovy_language_specification">1. Groovy语言规范</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_syntax">1.1. Syntax</h3>
+<h3 id="_syntax">1.1. 语法</h3>
 <div class="paragraph">
-<p>This chapter covers the syntax of the Groovy programming language.
-The grammar of the language derives from the Java grammar,
-but enhances it with specific constructs for Groovy, and allows certain simplifications.</p>
+<p>本章将覆盖Groovy编程语言的语法。
+Groovy语言的语法是由JAVA语言的语法衍生出来,
+但具体结构上会有所增强，同时容许一定的简化。</p>
 </div>
 <div class="sect3">
-<h4 id="_comments">1.1.1. Comments</h4>
+<h4 id="_comments">1.1.1. 注释</h4>
 <div class="sect4">
-<h5 id="_single_line_comment">Single line comment</h5>
+<h5 id="_single_line_comment">单行注释</h5>
 <div class="paragraph">
-<p>Single line comments start with <code>//</code> and can be found at any position in the line.
-The characters following <code>//</code>, till the end of the line, are considered part of the comment.</p>
+<p>单行注释以<code>//</code>开始，同时它可以出现在行的任何地方。
+在<code>//</code>之后的字符, 一直到行尾都是注释的部分。</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -807,12 +803,11 @@ println "hello" // a comment till the end of the line</code></pre>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_multiline_comment">Multiline comment</h5>
+<h5 id="_multiline_comment">多行注释</h5>
 <div class="paragraph">
-<p>A multiline comment starts with <code>/*</code> and can be found at any position in the line.
-The characters following <code>/*</code> will be considered part of the comment, including new line characters,
-up to the first <code>*/</code> closing the comment.
-Multiline comments can thus be put at the end of a statement, or even inside a statement.</p>
+<p>一个多行的注释以<code>/*</code>开头，同时它可以出现在行的任何地方。
+在<code>/*</code>之后的字符将会被视作注释的一部分，包括新一行的字符, 直到第一个<code>*/</code>来结束注释。
+多行注释因此可以被放到行尾，或者甚至在句子中间。</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -825,28 +820,27 @@ println 1 /* one */ + 2 /* two */</code></pre>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_groovydoc_comment">GroovyDoc comment</h5>
+<h5 id="_groovydoc_comment">GroovyDoc注释</h5>
 <div class="paragraph">
-<p>Similarly to multiline comments, GroovyDoc comments are multiline, but start with <code>/**</code> and end with <code>*/</code>.
-Lines following the first GroovyDoc comment line can optionally start with a star <code>*</code>.
-Those comments are associated with:</p>
+<p>与多行注释类似，GroovyDoc注释是多行的，但是是以<code>/**</code>开始和以<code>*/</code>结尾。
+在第一行GroovyDoc注释之后的行可以可选地以<code>*</code>开头。
+这些注释的组成有：</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>type definitions (classes, interfaces, enums, annotations),</p>
+<p>类型定义（类，接口，枚举，注解），</p>
 </li>
 <li>
-<p>fields and properties definitions</p>
+<p>字段和属性定义</p>
 </li>
 <li>
-<p>methods definitions</p>
+<p>方法定义</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Although the compiler will not complain about GroovyDoc comments not being associated with the above language elements,
-you should prepend those constructs with the comment right before it.</p>
+<p>虽然编译器不会抱怨GroovyDoc注释没后包含上面的语言元素，但你应该在做注释之前预先考虑前面提到的这些结构。</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -870,8 +864,8 @@ class Person {
 </div>
 </div>
 <div class="paragraph">
-<p>GroovyDoc follows the same conventions as Java&#8217;s own JavaDoc.
-So you&#8217;ll be able to use the same tags as with JavaDoc.</p>
+<p>GroovyDoc遵循与Java&#8217;s自带的JavaDoc一样的约定。
+所以你可以使用于JavaDoc一样的标记。</p>
 </div>
 </div>
 <div class="sect4">
