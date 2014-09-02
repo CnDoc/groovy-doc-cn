@@ -51,10 +51,8 @@ border-right-color: #333333;border-bottom-color: #333333;border-left-color: #333
 							<li><a href="groovy_language_specification.html#_identifiers">1.1.3. 标识符</a></li>
 							<li>
 								<ul class="sectlevel4">
-									<li><a href="groovy_language_specification.html#_normal_identifiers">Normal
-											identifiers</a></li>
-									<li><a href="groovy_language_specification.html#_quoted_identifiers">Quoted
-											identifiers</a></li>
+									<li><a href="groovy_language_specification.html#_normal_identifiers">普通标识符</a></li>
+									<li><a href="groovy_language_specification.html#_quoted_identifiers">带引号标识符</a></li>
 								</ul>
 							</li>
 							<li><a href="groovy_language_specification.html#all-strings">1.1.4. Strings</a></li>
@@ -997,7 +995,7 @@ println "Hello from the shebang line"</code></pre>
 </ul>
 </div>
 <div class="paragraph">
-<p>下面的字符可以包含字母与数字。</p>
+<p>首字母之后的字符可以包含字母与数字。</p>
 </div>
 <div class="paragraph">
 <p>这里有一些合法的表示符的例子(这是合法的名字):</p>
@@ -1036,10 +1034,10 @@ foo.catch</code></pre>
 <div class="sect4">
 <h5 id="_quoted_identifiers">带引号的标识符</h5>
 <div class="paragraph">
-<p>Quoted identifiers appear after the dot of a dotted expression.
-For instance, the <code>name</code> part of the <code>person.name</code> expression can be quoted with <code>person."name"</code> or <code>person.'name&#8217;</code>.
-This is particularly interesting when certain identifiers contain illegal characters that are forbidden by the Java Language Specification,
-but which are allowed by Groovy when quoted. For example, characters like a dash, a space, an exclamation mark, etc.</p>
+<p>带引号标识符出现在点号表达式的点号之后。
+例如，<code>person.name</code>表达式中<code>name</code>部分就可以引号引起来成为<code>person."name"</code>或<code>person.'name'</code>
+有趣的是，当某些标识符包含由Java语言规范中禁止的非法字符，引号引起来后在Groovy就会被容许。
+例如，像一个破折号，空格，感叹号等字符。</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1053,8 +1051,9 @@ assert map.'with-dash-signs-and-single-quotes' == "ALLOWED"</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>As we shall see in the <a href="groovy_language_specification.html#all-strings">following section on strings</a>, Groovy provides different string literals.
-All kind of strings are actually allowed after the dot:</p>
+<p>
+正如我们将会在<a href="groovy_language_specification.html#all-strings">strings</a>一节看到的那样，Groovy提供不同的字符串文字。
+所有跟着点号的字符串都是被允许的：</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1067,8 +1066,8 @@ map.$/dollar slashy string/$</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>There&#8217;s a difference between plain character strings and Groovy&#8217;s GStrings (interpolated strings),
-as in that the latter case, the interpolated values are inserted in the final string for evaluating the whole identifier:</p>
+<p>
+正如下面的例子，纯字符的字符串和Groovy的GStings（字符串插值）的区别是，计算整个标识符时，插入的字符值是被插入到最终字符串:</p>
 </div>
 <div class="listingblock">
 <div class="content">
