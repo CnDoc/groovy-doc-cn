@@ -55,15 +55,12 @@ border-right-color: #333333;border-bottom-color: #333333;border-left-color: #333
 									<li><a href="groovy_language_specification.html#_quoted_identifiers">带引号标识符</a></li>
 								</ul>
 							</li>
-							<li><a href="groovy_language_specification.html#all-strings">1.1.4. Strings</a></li>
+							<li><a href="groovy_language_specification.html#all-strings">1.1.4. 字符串</a></li>
 							<li>
 								<ul class="sectlevel4">
-									<li><a href="groovy_language_specification.html#_single_quoted_string">Single
-											quoted string</a></li>
-									<li><a href="groovy_language_specification.html#_string_concatenation">String
-											concatenation</a></li>
-									<li><a href="groovy_language_specification.html#_triple_single_quoted_string">Triple
-											single quoted string</a></li>
+									<li><a href="groovy_language_specification.html#_single_quoted_string">单引号字符串</a></li>
+									<li><a href="groovy_language_specification.html#_string_concatenation">字符串连接符</a></li>
+									<li><a href="groovy_language_specification.html#_triple_single_quoted_string">三引号字符串</a></li>
 									<li>
 										<ul class="sectlevel5">
 											<li><a href="groovy_language_specification.html#_escaping_special_characters">Escaping
@@ -1080,16 +1077,15 @@ assert map.'Simson-Homer' == "Homer Simson"</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="all-strings">1.1.4. Strings</h4>
+<h4 id="all-strings">1.1.4. 字符串</h4>
 <div class="paragraph">
-<p>Text literals are represented in the form of chain of characters called strings.
-Groovy lets you instantiate <code>java.lang.String</code> objects, as well as GStrings (<code>groovy.lang.GString</code>)
-which are also called <em>interpolated strings</em> in other programming languages.</p>
+<p>字符以链的形式形成的文本被称作字符串。
+Groovy容许你实例化<code>java.lang.String</code>对象，以及在其他语言中被称作<em>插值字符串</em>（interpolated strings）的GStrings (<code>groovy.lang.GString</code>)</p>
 </div>
 <div class="sect4">
-<h5 id="_single_quoted_string">Single quoted string</h5>
+<h5 id="_single_quoted_string">单引号字符串</h5>
 <div class="paragraph">
-<p>Single quoted strings are a series of characters surounded by single quotes:</p>
+<p>单引号字符串是一系列被单引号引起来的字符：</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1106,16 +1102,16 @@ assert map.'Simson-Homer' == "Homer Simson"</code></pre>
 <i class="icon-note" title="Note"></i>
 </td>
 <td class="content">
-Single quoted strings are plain <code>java.lang.String</code> and don&#8217;t support interpolation.
+单引号字符串是纯的<code>java.lang.String</code>，同时不支持插值。
 </td>
 </tr>
 </table>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_string_concatenation">String concatenation</h5>
+<h5 id="_string_concatenation">字符串连接</h5>
 <div class="paragraph">
-<p>All the Groovy strings can be concatenated with the <code>+</code> operator:</p>
+<p>所有Groovy的字符串都已个用<code>+</code>号连接起来：</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1124,9 +1120,9 @@ Single quoted strings are plain <code>java.lang.String</code> and don&#8217;t su
 </div>
 </div>
 <div class="sect4">
-<h5 id="_triple_single_quoted_string">Triple single quoted string</h5>
+<h5 id="_triple_single_quoted_string">三引号字符串</h5>
 <div class="paragraph">
-<p>Triple single quoted strings are a series of characters surrounded by single quotes:</p>
+<p>三引号字符串是一系列被单引号引起来的字符：</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1140,14 +1136,14 @@ Single quoted strings are plain <code>java.lang.String</code> and don&#8217;t su
 <i class="icon-note" title="Note"></i>
 </td>
 <td class="content">
-Triple single quoted strings are plain <code>java.lang.String</code> and don&#8217;t support interpolation.
+三引号字符串是纯的<code>java.lang.String</code>，同时不支持插值。
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Triple single quoted strings are multiline.
-You can span the content of the string across line boundaries without the need to split the string in several pieces, without contatenation or newline escape characters:</p>
+<p>三引号字符串可以是多行的。
+你不必将字符串分割成几块，也不必用连接符或换行符转义字符来将字符串跨行：</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1157,12 +1153,13 @@ line three'''</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>If your code is indented, for example in the body of the method of a class, your string will contain the whitespace of the indentation.
-The Groovy Development Kit contains methods for stripping out the indentation with the <code>String#stripIndent()</code> method,
-and with the <code>String#stripMargin()</code> method that takes a delimiter character to identify the text to remove from the beginning of a string.</p>
+<p>
+如果你的代码是缩进的，比如在类里面的方法，你的字符串将会包含这些空白的缩进。
+Groovy开发套件提供<code>String#stripIndent()</code>方法来剥离（stripping out）缩进，
+同时Groovy开发套件提供<code>String#stripMargin()</code>方法，该方法需要一个分隔符来识别从字符串的开头开始删除的文本</p>
 </div>
 <div class="paragraph">
-<p>When creating a string as follows:</p>
+<p>当创建如下的字符串时:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1174,8 +1171,8 @@ line three
 </div>
 </div>
 <div class="paragraph">
-<p>You will notice that the resulting string contains a newline character as first character.
-It is possible to strip that character by escaping the newline with a backslash:</p>
+<p>
+你会发现，得到的是一个以换行符开头的字符串。可以通过反斜杠转义换行来剥离该字符：</p>
 </div>
 <div class="listingblock">
 <div class="content">
