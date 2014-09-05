@@ -63,8 +63,7 @@ border-right-color: #333333;border-bottom-color: #333333;border-left-color: #333
 									<li><a href="groovy_language_specification.html#_triple_single_quoted_string">三引号字符串</a></li>
 									<li>
 										<ul class="sectlevel5">
-											<li><a href="groovy_language_specification.html#_escaping_special_characters">Escaping
-													special characters</a></li>
+											<li><a href="groovy_language_specification.html#_escaping_special_characters">转义特殊字符串</a></li>
 											<li><a href="groovy_language_specification.html#_unicode_escape_sequence">Unicode
 													escape sequence</a></li>
 										</ul>
@@ -1186,9 +1185,9 @@ assert !strippedFirstNewline.startsWith('\n')</code></pre>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_escaping_special_characters">Escaping special characters</h6>
+<h6 id="_escaping_special_characters">转移特殊字符串</h6>
 <div class="paragraph">
-<p>You can escape single quotes with the the backslash character to avoid terminating the string literal:</p>
+<p>你可以用反斜杠来转义单引号来避免终止字符串：</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1196,7 +1195,7 @@ assert !strippedFirstNewline.startsWith('\n')</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>And you can escape the escape character itself with a double backslash:</p>
+<p>同时你可以用两个反斜杠转义转义符号本身：</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1204,7 +1203,7 @@ assert !strippedFirstNewline.startsWith('\n')</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Some special characters also use the backslash as escape character:</p>
+<p>一些特殊的字符串都是用反斜杠来作为转义字符：</p>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 100%;">
 <colgroup>
@@ -1213,42 +1212,42 @@ assert !strippedFirstNewline.startsWith('\n')</code></pre>
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Escape sequence</th>
-<th class="tableblock halign-left valign-top">Character</th>
+<th class="tableblock halign-left valign-top">转义序列</th>
+<th class="tableblock halign-left valign-top">字符</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>\t</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tabulation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">制表键</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>\b</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">backspace</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">后退键</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>\n</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">newline</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">换行</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>\r</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">carriage return</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">回车</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>\f</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">formfeed</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">换页</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>\\</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">backslash</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">反斜杠</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>\</em>'</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">single quote (for single quoted and triple single quoted strings)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">单引号 (单引号和三单引号字符串)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>\"</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">double quote (for double quoted and triple double quoted strings)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">双引号(双引号和三双引号字符串)</p></td>
 </tr>
 </tbody>
 </table>
