@@ -64,12 +64,10 @@ border-right-color: #333333;border-bottom-color: #333333;border-left-color: #333
 									<li>
 										<ul class="sectlevel5">
 											<li><a href="groovy_language_specification.html#_escaping_special_characters">转义特殊字符串</a></li>
-											<li><a href="groovy_language_specification.html#_unicode_escape_sequence">Unicode
-													escape sequence</a></li>
+											<li><a href="groovy_language_specification.html#_unicode_escape_sequence">Unicode转义序列</a></li>
 										</ul>
 									</li>
-									<li><a href="groovy_language_specification.html#_double_quoted_string">Double
-											quoted string</a></li>
+									<li><a href="groovy_language_specification.html#_double_quoted_string">双引号字符串</a></li>
 									<li>
 										<ul class="sectlevel5">
 											<li><a href="groovy_language_specification.html#_string_interpolation">String
@@ -1185,7 +1183,7 @@ assert !strippedFirstNewline.startsWith('\n')</code></pre>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_escaping_special_characters">转移特殊字符串</h6>
+<h6 id="_escaping_special_characters">转义特殊字符串</h6>
 <div class="paragraph">
 <p>你可以用反斜杠来转义单引号来避免终止字符串：</p>
 </div>
@@ -1253,13 +1251,12 @@ assert !strippedFirstNewline.startsWith('\n')</code></pre>
 </table>
 </div>
 <div class="sect5">
-<h6 id="_unicode_escape_sequence">Unicode escape sequence</h6>
+<h6 id="_unicode_escape_sequence">Unicode转义序列</h6>
 <div class="paragraph">
-<p>For characters that are not present on your keyboard, you can use unicode escape sequances:
-a backslash, followed by <em>u</em>, then 4 hexadecimal digits.</p>
+<p>对于不存在你键盘上的字符，你可以使用Unicode转义序列：反斜杠，其次是<em>u</em>，然后4个十六进制数字。</p>
 </div>
 <div class="paragraph">
-<p>For example, the Euro currency symbol can be represented with:</p>
+<p>例如，欧元货币符号可以表示为：</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1269,9 +1266,9 @@ a backslash, followed by <em>u</em>, then 4 hexadecimal digits.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_double_quoted_string">Double quoted string</h5>
+<h5 id="_double_quoted_string">双引号字符串</h5>
 <div class="paragraph">
-<p>Double quoted strings are a series of characters surrounded by double quotes:</p>
+<p>双引号字符串是一系列被双引号引起来的字符：</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1285,8 +1282,8 @@ a backslash, followed by <em>u</em>, then 4 hexadecimal digits.</p>
 <i class="icon-note" title="Note"></i>
 </td>
 <td class="content">
-Double quoted strings are plain <code>java.lang.String</code> if there&#8217;s no interpolated expression,
-but are <code>groovy.lang.GString</code> instances if interpolation is present.
+如果没有插值表示式的话，双引号字符串是纯的<code>java.lang.String</code>，
+但如果有插值存在的话，双引号字符串就是一个<code>groovy.lang.GString</code>实例。
 </td>
 </tr>
 </table>
@@ -1298,7 +1295,7 @@ but are <code>groovy.lang.GString</code> instances if interpolation is present.
 <i class="icon-note" title="Note"></i>
 </td>
 <td class="content">
-To escape a double quote, you can use the backslash character: <code>"A double quote: \""</code>.
+为了转义一个双引号，你可以用反斜杠符号：<code>"A double quote: \""</code>.
 </td>
 </tr>
 </table>
