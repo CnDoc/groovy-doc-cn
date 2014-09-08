@@ -1304,7 +1304,7 @@ assert !strippedFirstNewline.startsWith('\n')</code></pre>
 <div class="paragraph">
 <p>除了单引号和三引号字符串,任何Groovy表达式都可以插值到所有的字符串里。
 插值就是当计算字符串的值时，用值替换掉字符串中的占位符。
-占位符表达式是用<code>${}</code>围起来好或以<code>$</code>为前缀的点表达式。
+占位符表达式是用<code>${}</code>围起来的，或者以<code>$</code>为前缀的点表达式。
 当一个GString被传到一个需要字符串为参数的方法时，这个GString会调用<code>toString()</code>来计算自己的字符串值，这时字符串里面的占位符会计算为自己表达式值的字符串形式。</p>
 </div>
 <div class="paragraph">
@@ -1320,7 +1320,7 @@ assert greeting.toString() == 'Hello Guillaume'</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>然而任何的Groovy表达式都是 有效的，正如我们看到的这个例子，它带有一个算术表达式:</p>
+<p>然而任何的Groovy表达式都是有效的，正如我们看到的这个例子，它带有一个算术表达式:</p>
 </div>
 <div class="listingblock">
 <div class="content">
