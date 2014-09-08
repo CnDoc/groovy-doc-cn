@@ -70,8 +70,7 @@ border-right-color: #333333;border-bottom-color: #333333;border-left-color: #333
 									<li><a href="groovy_language_specification.html#_double_quoted_string">双引号字符串</a></li>
 									<li>
 										<ul class="sectlevel5">
-											<li><a href="groovy_language_specification.html#_string_interpolation">String
-													interpolation</a></li>
+											<li><a href="groovy_language_specification.html#_string_interpolation">字符串插值</a></li>
 											<li><a
 												href="groovy_language_specification.html#_special_case_of_interpolating_closure_expressions">Special
 													case of interpolating closure expressions</a></li>
@@ -1301,15 +1300,16 @@ assert !strippedFirstNewline.startsWith('\n')</code></pre>
 </table>
 </div>
 <div class="sect5">
-<h6 id="_string_interpolation">String interpolation</h6>
+<h6 id="_string_interpolation">字符串插值</h6>
 <div class="paragraph">
-<p>Any Groovy expression can be interpolated in all string literals, apart from single and triple single quoted strings.
-Interpolation is the act of replacing a placeholder in the string with its value upon evaluation of the string.
-The placeholder expressions are surrounded by <code>${}</code> or prefixed with <code>$</code> for dotted expressions.
-The expression value inside the placeholder is evaluated to its string representation when the GString is passed to a method taking a String as argument by calling <code>toString()</code> on that expression.</p>
+<p>除了单引号和三引号字符串,任何Groovy表达式都可以插值到所有的字符串里。
+插值就是当计算字符串的值时，用值替换掉字符串中的占位符。
+占位符表达式是用<code>${}</code>围起来好或以<code>$</code>为前缀的点表达式。
+当一个GString被传到一个需要字符串为参数的方法时，这个GString会调用<code>toString()</code>来计算自己的字符串值，这时字符串里面的占位符会计算为自己表达式值的字符串形式。</p>
 </div>
 <div class="paragraph">
-<p>Here, we have a string with a placeholder referencing a local variable:</p>
+<p>
+在这里，我们有一个带占位符的字符串，这个占位符引用一个本地变量：</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1320,7 +1320,7 @@ assert greeting.toString() == 'Hello Guillaume'</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>But any Groovy expression is valid, as we can see in this example with an arithmetic expression:</p>
+<p>然而任何的Groovy表达式都是 有效的，正如我们看到的这个例子，它带有一个算术表达式:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1335,15 +1335,16 @@ assert sum.toString() == 'The sum of 2 and 3 equals 5'</code></pre>
 <i class="icon-note" title="Note"></i>
 </td>
 <td class="content">
-Not only expressions are actually allowed in between the <code>${}</code> placeholder. Statements are also allowed, but a statement&#8217;s value is just <code>null</code>.
-So if several statements are inserted in that placeholder, the last one should somehow return a meaningful value to be inserted.
-For instance, <code>"The sum of 1 and 2 is equal to ${def a = 1; def b = 2; a + b}"</code> is supported and works as expected but a good practice is usually to stick to simple expressions inside GString placeholders.
+不但表达式在<code>${}</code>占位符里面是合法的。语句也同样是合法的，但语句的值为<code>null</code>。
+所以如果有多个语句在占位符里面，最后的那个语句应该返回一个有意义的值，以便替换整个占位符的值。
+例如，
+<code>"The sum of 1 and 2 is equal to ${def a = 1; def b = 2; a + b}"</code>是可以工作的，但一个好的做法通常是在GString里面的占位符内的表达式应该尽量简单。
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>In addition to <code>${}</code> placeholders, we can also use a lone <code>$</code> sign prefixing a dotted expression:</p>
+<p>除了<code>${}</code>占位符外，我们也可以用单一个<code>$</code>前缀符号的点表达式 ：</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1352,8 +1353,9 @@ assert "$person.name is $person.age years old" == 'Guillaume is 36 years old'</c
 </div>
 </div>
 <div class="paragraph">
-<p>But only dotted expressions of the form <code>a.b</code>, <code>a.b.c</code>, etc, are valid, but expressions that would contain parentheses like method calls, curly braces for closures, or arithmetic operators would be invalid.
-Given the following variable definition of a number:</p>
+<p>不单单<code>a.b</code>, <code>a.b.c</code>等点表达式是有效的， 
+而且像方法这种带括号的表达式表达式，带大括号的闭包，或者算术运算符都是合法的。
+给定以下这个定义为数字的变量：</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1361,7 +1363,8 @@ Given the following variable definition of a number:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The following statement will throw a <code>groovy.lang.MissingPropertyException</code> because Groovy believes you&#8217;re trying to access the <code>toString</code> property of that number, which doesn&#8217;t exist:</p>
+<p>
+下面的句子会抛出一个<code>groovy.lang.MissingPropertyException</code>异常，因为Groovy认为你试图访问这个数字的<code>toString</code>这个不存在的属性：</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1377,14 +1380,14 @@ Given the following variable definition of a number:</p>
 <i class="icon-note" title="Note"></i>
 </td>
 <td class="content">
-You can think of <code>"$number.toString()"</code> as being interpreted by the parser as <code>"${number.toString}()"</code>.
+你可以将<code>"$number.toString()"</code>想象为被解析器解释执行为<code>"${number.toString}()"</code>.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>If you need to escape the <code>$</code> or <code>${}</code> placeholders in a GString so they appear as is without interpolation,
-you just need to use a <code>\</code> backslash character to escape the dollar sign:</p>
+<p>如果你想在GString转义<code>$</code>或<code>${}</code>以便不让他们显示为插值，
+你只需要用反斜杠转义美元符号：</p>
 </div>
 <div class="listingblock">
 <div class="content">
