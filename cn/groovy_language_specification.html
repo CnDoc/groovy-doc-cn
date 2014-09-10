@@ -147,9 +147,7 @@ border-right-color: #333333;border-bottom-color: #333333;border-left-color: #333
 
 											<li><a href="groovy_language_specification.html#_inteoperability_with_java">与JAVA的互操作性</a></li>
 
-											<li><a href="groovy_language_specification.html#_gstring_and_string_hashcodes">GString
-
-													and String hashCodes</a></li>
+											<li><a href="groovy_language_specification.html#_gstring_and_string_hashcodes">GString和String的hashCode</a></li>
 
 										</ul>
 
@@ -3054,19 +3052,16 @@ assert result == 'The message is hello'</code></pre>
 
 <div class="sect5">
 
-<h6 id="_gstring_and_string_hashcodes">GString and String hashCodes</h6>
+<h6 id="_gstring_and_string_hashcodes">GString和String的hashCode</h6>
 
 <div class="paragraph">
 
-<p>Although interpolated strings can be used in lieu of plain Java strings,
-
-they differ with strings in a particular way: their hashCodes are different.
-
-Plain Java strings are immutable, whereas the resulting String representation of a GString can vary,
-
-depending on its interpolated values.
-
-Even for the same resulting string, GStrings and Strings don&#8217;t have the same hashCode.</p>
+<p>
+虽然插值字符串可以被用来替代纯的Java字符串，
+但它们有特别的方法来区分字符串：它们的hashcode是不同的。
+纯Java字符串是不可变的，而GString表示的结果字符串却是可变的，这取决与它的插值。
+即使是相同的结果字符串，GString和String的hasCode也是不同的。
+</p>
 
 </div>
 
@@ -3082,9 +3077,9 @@ Even for the same resulting string, GStrings and Strings don&#8217;t have the sa
 
 <div class="paragraph">
 
-<p>GString and Strings having different hashCode values, using GString as Map keys should be avoided,
-
-especially if we try to retrieve an associated value with a String instead of a GString.</p>
+<p>
+GString和String有着不同的hasCode值，应该避免把GString用作Map的键，尤其是当我们尝试检索一个值时，应当使用String而不是GString。
+</p>
 
 </div>
 
@@ -3111,7 +3106,7 @@ assert m["a"] == null                   <i class="conum" data-value="2"></i><b>(
 
 <td><i class="conum" data-value="1"></i><b>1</b></td>
 
-<td>The map is created with an initial pair whose key is a GString</td>
+<td>map创建了一个以GString为键的键值对</td>
 
 </tr>
 
@@ -3119,7 +3114,7 @@ assert m["a"] == null                   <i class="conum" data-value="2"></i><b>(
 
 <td><i class="conum" data-value="2"></i><b>2</b></td>
 
-<td>When we try to fetch the value with a String key, we will not find it, as Strings and GString have different hashCode values</td>
+<td>当我们尝试用String类型键获取值的时候，我们将找不到, 因为String和GString有着不同的hashCode值</td>
 
 </tr>
 
