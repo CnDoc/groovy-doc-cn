@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
 
 <head>
 
@@ -145,9 +145,7 @@ border-right-color: #333333;border-bottom-color: #333333;border-left-color: #333
 
 												href="groovy_language_specification.html#_special_case_of_interpolating_closure_expressions">插值的特殊形式闭包表达式</a></li>
 
-											<li><a href="groovy_language_specification.html#_inteoperability_with_java">Inteoperability
-
-													with Java</a></li>
+											<li><a href="groovy_language_specification.html#_inteoperability_with_java">与JAVA的互操作性</a></li>
 
 											<li><a href="groovy_language_specification.html#_gstring_and_string_hashcodes">GString
 
@@ -2966,15 +2964,13 @@ assert lazyGString ==  "value == 2" <i class="conum" data-value="6"></i><b>(6)</
 
 <div class="sect5">
 
-<h6 id="_inteoperability_with_java">Inteoperability with Java</h6>
+<h6 id="_inteoperability_with_java">与JAVA的互操作性</h6>
 
 <div class="paragraph">
 
-<p>When a method (whether implemented in Java or Groovy) expects a <code>java.lang.String</code>,
-
-but we pass a <code>groovy.lang.GString</code> instance,
-
-the <code>toString()</code> method of the GString is automatically and transparently called.</p>
+<p>当一个方法(无论是用JAVA实现还是Groovy)期望一个<code>java.lang.String</code>作为参数，
+但我们传了一个<code>groovy.lang.GString</code>实例的时候，Gstring的<code>toString()</code>方法就会自动地，透明地被调用。
+</p>
 
 </div>
 
@@ -3014,7 +3010,7 @@ assert result == 'The message is hello'</code></pre>
 
 <td><i class="conum" data-value="1"></i><b>1</b></td>
 
-<td>We create a GString variable</td>
+<td>我们创建了一个GString变量</td>
 
 </tr>
 
@@ -3022,7 +3018,7 @@ assert result == 'The message is hello'</code></pre>
 
 <td><i class="conum" data-value="2"></i><b>2</b></td>
 
-<td>We double check it&#8217;s an instance of the GString</td>
+<td>我们复查它的确是一个GString的实例</td>
 
 </tr>
 
@@ -3030,7 +3026,7 @@ assert result == 'The message is hello'</code></pre>
 
 <td><i class="conum" data-value="3"></i><b>3</b></td>
 
-<td>We then pass that GString to a method taking a String as parameter</td>
+<td>这时我们传递以个GString给一个接受String作为参数的方法</td>
 
 </tr>
 
@@ -3038,7 +3034,7 @@ assert result == 'The message is hello'</code></pre>
 
 <td><i class="conum" data-value="4"></i><b>4</b></td>
 
-<td>The signature of the <code>takeString()</code> method explicitly says its sole parameter is a String</td>
+<td><code>takeString()</code>方法的签名明确的说明了它的唯一的一个参数是字符串类型</td>
 
 </tr>
 
@@ -3046,7 +3042,7 @@ assert result == 'The message is hello'</code></pre>
 
 <td><i class="conum" data-value="5"></i><b>5</b></td>
 
-<td>We also verify that the parameter is indeed a String and not a GString.</td>
+<td>我们也验证参数确实是一个字符串，而不是一个GString。</td>
 
 </tr>
 
