@@ -155,7 +155,7 @@ border-right-color: #333333;border-bottom-color: #333333;border-left-color: #333
 
 									<li><a href="groovy_language_specification.html#_triple_double_quoted_string">三双引号字符串</a></li>
 
-									<li><a href="groovy_language_specification.html#_slashy_string">Slashy string</a></li>
+									<li><a href="groovy_language_specification.html#_slashy_string">斜杠字符串</a></li>
 
 									<li><a href="groovy_language_specification.html#_dollar_slashy_string">Dollar
 
@@ -3192,21 +3192,19 @@ assert template.toString().contains('Groovy')</code></pre>
 
 <div class="sect4">
 
-<h5 id="_slashy_string">Slashy string</h5>
+<h5 id="_slashy_string">斜杠字符串</h5>
 
 <div class="paragraph">
 
-<p>Beyond the usual quoted strings, Groovy offers slashy strings, which use <code>/</code> as delimiters.
-
-Slashy strings are particularly useful for defining regular expressions and patterns,
-
-as there is no need to escape backslashes.</p>
+<p>
+除了通常的带引号的字符串，Groovy提供斜杠字符串，它使用<code>/</code>作为分隔符。
+斜杠字符串在定义正则表达式和模式的时候非常有用，因为不必要反斜杠来转义。</p>
 
 </div>
 
 <div class="paragraph">
 
-<p>Example of a slashy string:</p>
+<p>斜杠字符串的例子:</p>
 
 </div>
 
@@ -3224,7 +3222,7 @@ assert fooPattern == '.*foo.*'</code></pre>
 
 <div class="paragraph">
 
-<p>Only forward slashes need to be escaped with a backslash:</p>
+<p>只有正斜杠需要用反斜杠转义:</p>
 
 </div>
 
@@ -3242,7 +3240,7 @@ assert escapeSlash == 'The character / is a forward slash'</code></pre>
 
 <div class="paragraph">
 
-<p>Slashy strings are multiline:</p>
+<p>斜杠字符串可以是多行的：</p>
 
 </div>
 
@@ -3265,7 +3263,7 @@ assert multilineSlashy.contains('\n')</code></pre>
 
 <div class="paragraph">
 
-<p>Slashy strings can also be interpolated (ie. a GString):</p>
+<p>斜杠字符串也可以被插值（例如GString）：</p>
 
 </div>
 
@@ -3286,15 +3284,16 @@ assert interpolatedSlashy == 'a blue car'</code></pre>
 
 <div class="paragraph">
 
-<p>There are a few gotchas to be aware of.</p>
+<p>有几个陷阱需要注意的。 </p>
 
 </div>
 
 <div class="paragraph">
 
-<p>An empty slashy string cannot be represented with a double forward slash, as it&#8217;s understood by the Groovy parser as a line comment.
-
-That&#8217;s why the following assert would actually not compile as it would look like a non-terminated statement:</p>
+<p>
+一个空的斜杠字符串不可以用两个正斜杠来表示，因为它会被Groovy解析器理解为是一个行注释。
+这就是以下的断言为什么实际上不会被编译，因为它看起像个还没结束的句子：
+</p>
 
 </div>
 
