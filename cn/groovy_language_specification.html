@@ -3518,8 +3518,8 @@ assert [
 <div class="paragraph">
 
 <p>
-与Java，Groovy中并没有一个明确的字符文字。
-然而你可以有种不同的方法，明确定义一个Groovy字符串使它实际上就是一字符:</p>
+与Java不同，Groovy中并没有一个明确的字符文字。
+然而你可以三有种不同的方法，明确定义一个Groovy字符串使它实际上就是一字符:</p>
 
 </div>
 
@@ -3528,19 +3528,13 @@ assert [
 <div class="content">
 
 <pre class="prettyprint"><code class="groovy language-groovy">char c1 = 'A' <i class="conum" data-value="1"></i><b>(1)</b>
-
 assert c1 instanceof Character
 
-
 def c2 = 'B' as char <i class="conum" data-value="2"></i><b>(2)</b>
-
 assert c2 instanceof Character
 
-
 def c3 = (char)'C' <i class="conum" data-value="3"></i><b>(3)</b>
-
 assert c3 instanceof Character</code></pre>
-
 </div>
 
 </div>
