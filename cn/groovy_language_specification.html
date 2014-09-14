@@ -161,7 +161,7 @@ border-right-color: #333333;border-bottom-color: #333333;border-left-color: #333
 
 									<li><a href="groovy_language_specification.html#_string_summary_table">字符串汇总表</a></li>
 
-									<li><a href="groovy_language_specification.html#_characters">Characters</a></li>
+									<li><a href="groovy_language_specification.html#_characters">字符(Characters)</a></li>
 
 								</ul>
 
@@ -3513,13 +3513,13 @@ assert [
 
 <div class="sect4">
 
-<h5 id="_characters">Characters</h5>
+<h5 id="_characters">字符</h5>
 
 <div class="paragraph">
 
-<p>Unlike Java, Groovy doesn&#8217;t have an explicit character literal.
-
-However, you can be explicit about making a Groovy string an actual character, by three different means:</p>
+<p>
+与Java，Groovy中并没有一个明确的字符文字。
+然而你可以有种不同的方法，明确定义一个Groovy字符串使它实际上就是一字符:</p>
 
 </div>
 
@@ -3553,7 +3553,9 @@ assert c3 instanceof Character</code></pre>
 
 <td><i class="conum" data-value="1"></i><b>1</b></td>
 
-<td>by being explicit when declaring a variable holding the character by specifying the <code>char</code> type</td>
+<td>
+在声明变量的时候，通过显示声明<code>char</code>类型来指定它
+</td>
 
 </tr>
 
@@ -3561,7 +3563,9 @@ assert c3 instanceof Character</code></pre>
 
 <td><i class="conum" data-value="2"></i><b>2</b></td>
 
-<td>by using type coercion with the <code>as</code> operator</td>
+<td>
+使用<code>as</code>操作符来强制转换
+</td>
 
 </tr>
 
@@ -3569,7 +3573,9 @@ assert c3 instanceof Character</code></pre>
 
 <td><i class="conum" data-value="3"></i><b>3</b></td>
 
-<td>by using a cast to char operation</td>
+<td>
+使用chat操作符强制转换
+</td>
 
 </tr>
 
@@ -3590,11 +3596,8 @@ assert c3 instanceof Character</code></pre>
 </td>
 
 <td class="content">
-
-The first option <em class="conum">1</em> is interesting when the character is held in a variable,
-
-while the other two (<em class="conum">2</em> and <em class="conum">3</em>) are more interesting when a char value must be passed as argument of a method call.
-
+当一个变量持有一个字符时，更倾向于第<em class="conum">1</em>种选择，
+当一个字符值必须传给一个方法调用的时候，更倾向于其他两种(<em class="conum">2</em> and <em class="conum">3</em>)选择。
 </td>
 
 </tr>
