@@ -167,7 +167,7 @@ border-right-color: #333333;border-bottom-color: #333333;border-left-color: #333
 
 							</li>
 
-							<li><a href="groovy_language_specification.html#_numbers">1.1.5. Numbers</a></li>
+							<li><a href="groovy_language_specification.html#_numbers">1.1.5. 数字</a></li>
 
 							<li>
 
@@ -3519,7 +3519,7 @@ assert [
 
 <p>
 与Java不同，Groovy中并没有一个明确的字符文字。
-然而你可以三有种不同的方法，明确定义一个Groovy字符串使它实际上就是一字符:</p>
+然而你可以有三种不同的方法，明确定义一个Groovy字符串使它实际上就是一字符:</p>
 
 </div>
 
@@ -3606,21 +3606,25 @@ assert c3 instanceof Character</code></pre>
 
 <div class="sect3">
 
-<h4 id="_numbers">1.1.5. Numbers</h4>
+<h4 id="_numbers">1.1.5. 数字</h4>
 
 <div class="paragraph">
 
-<p>Groovy supports different kinds of integral literals and decimal literals, backed by the usual <code>Number</code> types of Java.</p>
+<p>
+Groovy支持不同种类整型和十进制文本，由Java的<code>Number</code>类型支持。
+</p>
 
 </div>
 
 <div class="sect4">
 
-<h5 id="_integral_literals">Integral literals</h5>
+<h5 id="_integral_literals">整型类型</h5>
 
 <div class="paragraph">
 
-<p>The integral literal types are the same as in Java:</p>
+<p>
+整型类型与Java的是一样的：
+</p>
 
 </div>
 
@@ -3670,7 +3674,9 @@ assert c3 instanceof Character</code></pre>
 
 <div class="paragraph">
 
-<p>You can create integral numbers of those types with the following declarations:</p>
+<p>
+你可以用下面的声明创建这些类型的整数:
+</p>
 
 </div>
 
@@ -3678,7 +3684,7 @@ assert c3 instanceof Character</code></pre>
 
 <div class="content">
 
-<pre class="prettyprint"><code class="groovy language-groovy">// primitive types
+<pre class="prettyprint"><code class="groovy language-groovy">// 基本类型
 
 byte  b = 1
 
@@ -3691,7 +3697,7 @@ int   i = 4
 long  l = 5
 
 
-// infinite precision
+// 无限精度
 
 BigInteger bi =  6</code></pre>
 
@@ -3701,15 +3707,16 @@ BigInteger bi =  6</code></pre>
 
 <div class="paragraph">
 
-<p>If you use optional typing by using the <code>def</code> keyword, the type of the integral number will vary:
-
-it&#8217;ll adapt to the capacity of the type that can hold that number.</p>
+<p>
+如果你使用<code>def</code>关键字来定义可选的类型，那么整型数字的类型就是可变的：
+它能自行适配到合适的类型，以便能持有那个数字。
+</p>
 
 </div>
 
 <div class="paragraph">
 
-<p>For positive numbers:</p>
+<p>对于正数:</p>
 
 </div>
 
@@ -3755,7 +3762,9 @@ assert e instanceof BigInteger</code></pre>
 
 <div class="paragraph">
 
-<p>As well as for negative numbers:</p>
+<p>
+同样的对于负数：
+</p>
 
 </div>
 
