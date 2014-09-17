@@ -203,9 +203,7 @@ border-right-color: #333333;border-bottom-color: #333333;border-left-color: #333
 
 									</li>
 
-									<li><a href="groovy_language_specification.html#_decimal_literals">Decimal
-
-											literals</a></li>
+									<li><a href="groovy_language_specification.html#_decimal_literals">小数</a></li>
 
 									<li><a href="groovy_language_specification.html#_underscore_in_literals">Underscore
 
@@ -3967,11 +3965,11 @@ assert xNegativeInt == -119</code></pre>
 
 <div class="sect4">
 
-<h5 id="_decimal_literals">Decimal literals</h5>
+<h5 id="_decimal_literals">小数</h5>
 
 <div class="paragraph">
 
-<p>The decimal literal types are the same as in Java:</p>
+<p>小数类型与Java的一样：</p>
 
 </div>
 
@@ -4003,7 +4001,8 @@ assert xNegativeInt == -119</code></pre>
 
 <div class="paragraph">
 
-<p>You can create decimal numbers of those types with the following declarations:</p>
+<p>
+你可以用以下声明来创建这些小数类型数字：</p>
 
 </div>
 
@@ -4028,9 +4027,9 @@ BigDecimal bd =  3.456</code></pre>
 
 <div class="paragraph">
 
-<p>Decimals can use exponents, with the <code>e</code> or <code>E</code> exponent letter, followed by an optional sign,
-
-and a integral number representing the exponent:</p>
+<p>
+小数可以使用指数，使用<code>e</code> or <code>E</code>的指数表示符，后跟一个可选的符号，和一个整数表示指数值：
+</p>
 
 </div>
 
@@ -4054,11 +4053,12 @@ assert 5e-1 ==      0.5</code></pre>
 
 <div class="paragraph">
 
-<p>Conveniently for exact decimal number calculations, Groovy choses <code>java.lang.BigDecimal</code> as its decimal number type.
-
-In addition, both <code>float</code> and <code>double</code> are supported, but require an explicit type declaration, type coercion or suffix.
-
-Even if <code>BigDecimal</code> is the default for decimal numbers, such literals are accepted in methods or closures taking <code>float</code> or <code>double</code> as parameter types.</p>
+<p>
+为了方便地进行精确的小数的计算，Groovy选择用<code>java.lang.BigDecimal</code>为小数的类型。
+此外，无论是<code>float</code> 和 <code>double</code>都是被支持的，
+但需要一个显示的类型声明，类型强制或后缀。
+即使<code>BigDecimal</code>的是默认的小数类型，但这样的小数是可被用在以<code>float</code> 或 <code>double</code>作为参数的方法或闭包中的。
+</p>
 
 </div>
 
@@ -4076,7 +4076,7 @@ Even if <code>BigDecimal</code> is the default for decimal numbers, such literal
 
 <td class="content">
 
-Decimal numbers can&#8217;t be represented using a binary, octal or hexadecimal representation.
+小数不能使用二进制，八进制或十六进制表示形式来表示。
 
 </td>
 
