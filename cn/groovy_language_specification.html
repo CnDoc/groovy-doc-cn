@@ -205,9 +205,7 @@ border-right-color: #333333;border-bottom-color: #333333;border-left-color: #333
 
 									<li><a href="groovy_language_specification.html#_number_type_suffixes">Number类型的后缀</a></li>
 
-									<li><a href="groovy_language_specification.html#_math_operations">Math
-
-											operations</a></li>
+									<li><a href="groovy_language_specification.html#_math_operations">算术运算</a></li>
 
 									<li>
 
@@ -4250,19 +4248,19 @@ assert 034G.class == BigInteger // octal</code></pre>
 
 <div class="sect4">
 
-<h5 id="_math_operations">Math operations</h5>
+<h5 id="_math_operations">算术运算</h5>
 
 <div class="paragraph">
 
-<p>Although <a href="groovy_language_specification.html#_operators">operators</a> are covered later on, it&#8217;s important to discuss the behavior of math operations
-
-and what their resulting types are.</p>
+<p>
+虽然<a href="groovy_language_specification.html#groovy-operators">操作符</a>将会在后面详细介绍介绍，但讨论算术运算符的行为和运算结果的类型也是非常重要的。
+</p>
 
 </div>
 
 <div class="paragraph">
 
-<p>Division and power binary operations aside (covered below),</p>
+<p>除了除法和指数这两个二元操作符外（后面将会介绍），</p>
 
 </div>
 
@@ -4272,31 +4270,32 @@ and what their resulting types are.</p>
 
 <li>
 
-<p>binary operations between <code>byte</code>, <code>char</code>, <code>short</code> and <code>int</code> result in <code>int</code></p>
+<p>
+<code>byte</code>, <code>char</code>, <code>short</code> 和 <code>int</code>之间的二元运算结果将会是<code>int</code></p>
 
 </li>
 
 <li>
 
-<p>binary operations involving <code>long</code> with <code>byte</code>, <code>char</code>, <code>short</code> and <code>int</code> result in <code>long</code></p>
+<p>涉及到<code>long</code> 与 <code>byte</code>, <code>char</code>, <code>short</code> 和 <code>int</code> 的结果将会是 <code>long</code></p>
 
 </li>
 
 <li>
 
-<p>binary operations involving <code>BigInteger</code> and any other integral type result in <code>BigInteger</code></p>
+<p>涉及到 <code>BigInteger</code> 和其他整型类型的结果将会是<code>BigInteger</code></p>
 
 </li>
 
 <li>
 
-<p>binary operations between <code>float</code>, <code>double</code> and <code>BigDecimal</code> result in <code>double</code></p>
+<p><code>float</code>, <code>double</code> 和  <code>BigDecimal</code> 之间二元操作的结果将会是 <code>double</code></p>
 
 </li>
 
 <li>
 
-<p>binary operations between two <code>BigDecimal</code> result in <code>BigDecimal</code></p>
+<p>两个<code>BigDecimal</code>之间的二元操作结果将会是<code>BigDecimal</code></p>
 
 </li>
 
@@ -4306,7 +4305,7 @@ and what their resulting types are.</p>
 
 <div class="paragraph">
 
-<p>The following table summarizes those rules:</p>
+<p>下面的表格总结了这些规则：</p>
 
 </div>
 
@@ -4599,11 +4598,7 @@ and what their resulting types are.</p>
 </td>
 
 <td class="content">
-
-Thanks Groovy&#8217;s operator overloading, the usual arithmetic operators work as well with <code>BigInteger</code> and <code>BigDecimal</code>,
-
-unlike in Java where you have to use explict methods for operating on those numbers.
-
+得益于Groovy的操作符重载，常用的算术运算符一样可以用于<code>BigInteger</code> 和 <code>BigDecimal</code>之间，而不用好像Java那样你必须使用显式方法来操作这些数字。
 </td>
 
 </tr>
