@@ -214,6 +214,10 @@ border-right-color: #333333;border-bottom-color: #333333;border-left-color: #333
 											<li><a href="groovy_language_specification.html#integer_division">在除法运算的情况下</a></li>
 
 											<li><a href="groovy_language_specification.html#power_operator">在幂运算的情况下</a></li>
+											
+											<li><a href="groovy_language_specification.html#integer_division">除法运算符的情况</a></li>
+
+											<li><a href="groovy_language_specification.html#power_operator">幂运算符的情况</a></li>
 
 										</ul>
 
@@ -4249,7 +4253,7 @@ assert 034G.class == BigInteger // octal</code></pre>
 <div class="paragraph">
 
 <p>
-虽然<a href="groovy_language_specification.html#groovy-operators">操作符</a>将会在后面详细介绍介绍，但讨论算术运算符的行为和运算结果的类型也是非常重要的。
+虽然<a href="groovy_language_specification.html#groovy-operators">操作符</a>将会在后面详细介绍，但讨论算术运算符的行为和运算结果的类型也是非常重要的。
 </p>
 
 </div>
@@ -4605,14 +4609,24 @@ assert 034G.class == BigInteger // octal</code></pre>
 
 <div class="sect5">
 
-<h6 id="integer_division">The case of the division operator</h6>
+<h6 id="integer_division">除法运算符的情况</h6>
 
 <div class="paragraph">
 
+<<<<<<< Upstream, based on branch 'gh-pages' of https://github.com/CnDoc/groovy-doc-cn.git
 <p>
 如果其中一个操作数是<code>float</code>或<code>double</code>的话，除法运算<code>/</code> (和 <code>/=</code> 执行除法和指定)的结果将会是<code>double</code>，其他的都会是<code>BigDecimal</code>
 （当操作数是<code>short</code>, <code>char</code>, <code>byte</code>, <code>int</code>, <code>long</code>,<code>BigInteger</code>或<code>BigDecimal</code>之间的任意组合）。
 </p>
+=======
+<p>除法运算符 <code>/</code> (和用于除法并指定 <code>/=</code>) 会产生一个 <code>double</code> 结果
+
+if either operand is a <code>float</code> or <code>double</code>, and a <code>BigDecimal</code> result otherwise
+
+(when both operands are any combination of an integral type <code>short</code>, <code>char</code>, <code>byte</code>, <code>int</code>, <code>long</code>,
+
+<code>BigInteger</code> or <code>BigDecimal</code>).</p>
+>>>>>>> b52973e change
 
 </div>
 
