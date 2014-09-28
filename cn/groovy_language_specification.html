@@ -211,13 +211,9 @@ border-right-color: #333333;border-bottom-color: #333333;border-left-color: #333
 
 										<ul class="sectlevel5">
 
-											<li><a href="groovy_language_specification.html#integer_division">The case
+											<li><a href="groovy_language_specification.html#integer_division">在除法运算的情况下</a></li>
 
-													of the division operator</a></li>
-
-											<li><a href="groovy_language_specification.html#power_operator">The case of
-
-													the power operator</a></li>
+											<li><a href="groovy_language_specification.html#power_operator">在幂运算的情况下</a></li>
 
 										</ul>
 
@@ -4613,13 +4609,10 @@ assert 034G.class == BigInteger // octal</code></pre>
 
 <div class="paragraph">
 
-<p>The division operators <code>/</code> (and <code>/=</code> for division and assignment) produce a <code>double</code> result
-
-if either operand is a <code>float</code> or <code>double</code>, and a <code>BigDecimal</code> result otherwise
-
-(when both operands are any combination of an integral type <code>short</code>, <code>char</code>, <code>byte</code>, <code>int</code>, <code>long</code>,
-
-<code>BigInteger</code> or <code>BigDecimal</code>).</p>
+<p>
+如果其中一个操作数是<code>float</code>或<code>double</code>的话，除法运算<code>/</code> (和 <code>/=</code> 执行除法和指定)的结果将会是<code>double</code>，其他的都会是<code>BigDecimal</code>
+（当操作数是<code>short</code>, <code>char</code>, <code>byte</code>, <code>int</code>, <code>long</code>,<code>BigInteger</code>或<code>BigDecimal</code>之间的任意组合）。
+</p>
 
 </div>
 
@@ -4652,11 +4645,7 @@ of the maximum of 10 and the maximum of the operands&#8217; scale.</p>
 </td>
 
 <td class="content">
-
-For integer division like in Java, you should use the <code>intdiv()</code> method,
-
-as Groovy doesn&#8217;t provide a dedicated integer division operator symbol.
-
+对于像Java中的整数除法，你应该使用<code>intdiv()</code>方法，而Groovy中并没有提供专用的整数除法运算符。
 </td>
 
 </tr>
@@ -4669,125 +4658,144 @@ as Groovy doesn&#8217;t provide a dedicated integer division operator symbol.
 
 <div class="sect5">
 
-<h6 id="power_operator">The case of the power operator</h6>
+<h6 id="power_operator">幂运算的情况下</h6>
 
 <div class="paragraph">
 
-<p>The power operation is represented by the <code>**</code> operator, with two parameters: the base and the exponent.
-
-The result of the power operation depends on its operands, and the result of the operation
-
-(in particular if the result can be represented as an integral value).</p>
-
-</div>
-
-<div class="paragraph">
-
-<p>The following rules are used by Groovy&#8217;s power operation to determine the resulting type:</p>
-
-</div>
-
-<div class="ulist">
-
-<ul>
-
-<li>
-
-<p>If the exponent is a decimal value</p>
-
-<div class="ulist">
-
-<ul>
-
-<li>
-
-<p>if the result can be represented as an <code>Integer</code>, then return an <code>Integer</code></p>
-
-</li>
-
-<li>
-
-<p>else if the result can be represented as a <code>Long</code>, then return a <code>Long</code></p>
-
-</li>
-
-<li>
-
-<p>otherwise return a <code>Double</code></p>
-
-</li>
-
-</ul>
-
-</div>
-
-</li>
-
-<li>
-
-<p>If the exponent is an integral value</p>
-
-<div class="ulist">
-
-<ul>
-
-<li>
-
-<p>if the exponent is strictly negative, then return an <code>Integer</code>, <code>Long</code> or <code>Double</code> if the result value fits in that type</p>
-
-</li>
-
-<li>
-
-<p>if the exponent is positive or zero</p>
-
-<div class="ulist">
-
-<ul>
-
-<li>
-
-<p>if the base is a <code>BigDecimal</code>, then return a <code>BigDecimal</code> result value</p>
-
-</li>
-
-<li>
-
-<p>if the base is a <code>BigInteger</code>, then return a <code>BigInteger</code> result value</p>
-
-</li>
-
-<li>
-
-<p>if the base is an <code>Integer</code>, then return an <code>Integer</code> if the result value fits in it, otherwise a <code>BigInteger</code></p>
-
-</li>
-
-<li>
-
-<p>if the base is a <code>Long</code>, then return a <code>Long</code> if the result value fits in it, otherwise a <code>BigInteger</code></p>
-
-</li>
-
-</ul>
-
-</div>
-
-</li>
-
-</ul>
-
-</div>
-
-</li>
-
-</ul>
+<p>
+幂运算是用<code>**</code>操作符表示，该操作符带有两个参数：底数和指数。
+幂运算的结果过取决与他的操作数和运算的结果（尤其是如果结果可被表示为一个整数）
+</p>
 
 </div>
 
 <div class="paragraph">
 
-<p>We can illustrate those rules with a few examples:</p>
+<p>
+以下是Groovy的幂运算的规则，以确定结果类型：
+</p>
+
+</div>
+
+<div class="ulist">
+
+<ul>
+
+<li>
+
+<p>如果指数是一个十进制值</p>
+
+<div class="ulist">
+
+<ul>
+
+<li>
+
+<p>
+如果结果可被表示为一个<code>Integer</code>，则返回一个<code>Integer</code> 
+</p>
+
+</li>
+
+<li>
+
+<p>
+否则，如果结果可以表示为一个<code>Long</code>，然后返回一个<code>Long</code>
+</p>
+
+</li>
+
+<li>
+
+<p>
+否则返回一个<code>Double</code>
+</p>
+
+</li>
+
+</ul>
+
+</div>
+
+</li>
+
+<li>
+
+<p>如果指数为整数</p>
+
+<div class="ulist">
+
+<ul>
+
+<li>
+
+<p>
+当指数为负，则返回一个<code>Integer</code>，<code>Long</code>或<code>Double</code>，这取决与结果值是否合适那个类型
+</p>
+
+</li>
+
+<li>
+
+<p>如果该指数是正数或零 </p>
+
+<div class="ulist">
+
+<ul>
+
+<li>
+
+<p>
+如果底数是一个<code>BigDecimal</code>，则返回一个<code>BigDecimal</code>值的结果 
+</p>
+
+</li>
+
+<li>
+
+<p>
+如果底数是一个<code>BigInteger</code>，然后返回一个<code>BigInteger</code>结果值 
+</p>
+
+</li>
+
+<li>
+
+<p>
+如果底数是一个整数，而且结果可以放进一个<code>Integer</code>类型的话，就返回<code>Integer</code>，否则返回一个<code>BigInteger</code>
+</p>
+
+</li>
+
+<li>
+
+<p>
+如果底数是一个<code>Long</code>，而且结果可以放进一个<code>Long</code>类型的话，就返回<code>Long</code>,否则返回一个<code>BigInteger</code>
+</p>
+
+</li>
+
+</ul>
+
+</div>
+
+</li>
+
+</ul>
+
+</div>
+
+</li>
+
+</ul>
+
+</div>
+
+<div class="paragraph">
+
+<p>
+我们可以用一些举例来说明这些规则：
+</p>
 
 </div>
 
