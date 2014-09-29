@@ -225,7 +225,7 @@ border-right-color: #333333;border-bottom-color: #333333;border-left-color: #333
 
 							<li><a href="groovy_language_specification.html#_booleans">1.1.6. 布尔值</a></li>
 
-							<li><a href="groovy_language_specification.html#_lists">1.1.7. Lists</a></li>
+							<li><a href="groovy_language_specification.html#_lists">1.1.7. 列表</a></li>
 
 							<li><a href="groovy_language_specification.html#_arrays">1.1.8. Arrays</a></li>
 
@@ -4935,17 +4935,15 @@ booleanField = true</code></pre>
 
 <div class="sect3">
 
-<h4 id="_lists">1.1.7. Lists</h4>
+<h4 id="_lists">1.1.7. 列表</h4>
 
 <div class="paragraph">
 
-<p>Groovy uses a comma-separated list of values, surrounded by square brackets, to denote lists.
-
-Groovy lists are plain JDK <code>java.util.List</code>, as Groovy doesn&#8217;t define its own collection classes.
-
-The concrete list implementation used when defining list literals are <code>java.util.ArrayList</code> by default,
-
-unless you decide to specify otherwise, as we shall see later on.</p>
+<p>
+Groovy使用逗号分割列表的值，使用方括号括起，来表示列表。
+Groovy列表是普通的JDK<code>java.util.List</code>，因为Groovy中没有定义自己的集合类。
+在默认情况下，定义列表的实现具体类是<code>java.util.ArrayList</code>，除非你决定自己指定，正如我们将在后面看到的。
+</p>
 
 </div>
 
@@ -4972,7 +4970,9 @@ assert numbers.size() == 3      <i class="conum" data-value="3"></i><b>(3)</b></
 
 <td><i class="conum" data-value="1"></i><b>1</b></td>
 
-<td>We define a list numbers delimited by commas and surrounded by square brackets, and we assign that list into a variable</td>
+<td>
+我们用逗号分割和方括号括起来的方法定义一个数字列表，同时我们指派这个列表到一个变量
+</td>
 
 </tr>
 
@@ -4980,7 +4980,9 @@ assert numbers.size() == 3      <i class="conum" data-value="3"></i><b>(3)</b></
 
 <td><i class="conum" data-value="2"></i><b>2</b></td>
 
-<td>The list is an instance of Java&#8217;s <code>java.util+List</code> interface</td>
+<td>
+这个列表是Java的<code>java.util.List</code>接口的一个实例
+</td>
 
 </tr>
 
@@ -4988,7 +4990,9 @@ assert numbers.size() == 3      <i class="conum" data-value="3"></i><b>(3)</b></
 
 <td><i class="conum" data-value="3"></i><b>3</b></td>
 
-<td>The size of the list can be queried with the <code>size()</code> method, and shows our list contains 3 elements</td>
+<td>
+列表的长度可以用<code>size()</code>方法来查询，它显示列表包含3个元素
+</td>
 
 </tr>
 
@@ -4998,7 +5002,9 @@ assert numbers.size() == 3      <i class="conum" data-value="3"></i><b>(3)</b></
 
 <div class="paragraph">
 
-<p>In the above example, we used a homogeneous list, but you can also create lists containing values of heterogeneous types:</p>
+<p>
+在上面的例子，我们使用了一个同质列表，但你也可以创建一个包含异构类型的值列表：
+</p>
 
 </div>
 
@@ -5020,7 +5026,9 @@ assert numbers.size() == 3      <i class="conum" data-value="3"></i><b>(3)</b></
 
 <td><i class="conum" data-value="1"></i><b>1</b></td>
 
-<td>Our list here contains a number, a string and a boolean value</td>
+<td>
+我们的列表包含了一个数字，一个字符串和一个布尔值
+</td>
 
 </tr>
 
@@ -5030,11 +5038,11 @@ assert numbers.size() == 3      <i class="conum" data-value="3"></i><b>(3)</b></
 
 <div class="paragraph">
 
-<p>We mentioned that by default, list literals are actually instances of <code>java.util.ArrayList</code>,
-
-but it is possible to use a different backing type for our lists,
-
-thanks to using type coercion with the <code>as</code> operator, or with explicit type declaration for your variables:</p>
+<p>
+我们提到，在默认情况下，列表实际上是<code>java.util.ArrayList</code>的实例，
+但我们的列表使用不同的类型，
+这得益于我们可以使用<code>as</code>操作符号强制类型转换，或者显式类型声明的变量：
+</p>
 
 </div>
 
@@ -5068,7 +5076,9 @@ assert otherLinked instanceof java.util.LinkedList</code></pre>
 
 <td><i class="conum" data-value="1"></i><b>1</b></td>
 
-<td>We use coercion with the <code>as</code> operator to explicitly request a <code>java.util.LinkedList</code> implementation</td>
+<td>
+我们使用<code>as</code>操作符强制明确要求一个<code>java.util.LinkedList</code>的实现
+</td>
 
 </tr>
 
@@ -5076,7 +5086,9 @@ assert otherLinked instanceof java.util.LinkedList</code></pre>
 
 <td><i class="conum" data-value="2"></i><b>2</b></td>
 
-<td>We can say that the variable holding the list literal is of type <code>java.util.LinkedList</code></td>
+<td>
+我们可以声明一个变量持有的列表是<code>java.util.LinkedList</code>类型的。
+</td>
 
 </tr>
 
@@ -5086,11 +5098,11 @@ assert otherLinked instanceof java.util.LinkedList</code></pre>
 
 <div class="paragraph">
 
-<p>You can access elements of the list with the <code>[]</code> subscript operator (both for reading and setting values)
-
-with positive indices or negative indices to access elements from the end of the list, as well as with ranges,
-
-and use the <code>&lt;&lt;</code> leftShift operator to append elements to a list:</p>
+<p>
+你可以用<code>[]</code>下标操作符访问列表的元素（读写值均可），
+使用正数从头访问，或负数从列表的尾部访问元素，也可以使用范围，
+也可以用<code>&lt;&lt;</code>左移操作符号来添加一个元素到列表：
+</p>
 
 </div>
 
@@ -5139,7 +5151,9 @@ assert letters[2..4] == ['C', 'd', 'e']    <i class="conum" data-value="6"></i><
 
 <td><i class="conum" data-value="1"></i><b>1</b></td>
 
-<td>Access the first element of the list (zeroth-based counting)</td>
+<td>
+访问列表的第一个元素（由0来是算起）
+</td>
 
 </tr>
 
@@ -5147,7 +5161,9 @@ assert letters[2..4] == ['C', 'd', 'e']    <i class="conum" data-value="6"></i><
 
 <td><i class="conum" data-value="2"></i><b>2</b></td>
 
-<td>Access the last element of the list with a negative index: -1 is the first element from the end of the list</td>
+<td>
+用一个负数索引来访问最尾的元素：-1是从尾部算起的第一个元素
+</td>
 
 </tr>
 
@@ -5155,7 +5171,9 @@ assert letters[2..4] == ['C', 'd', 'e']    <i class="conum" data-value="6"></i><
 
 <td><i class="conum" data-value="3"></i><b>3</b></td>
 
-<td>Use an assignment to set a new value for the third element of the list</td>
+<td>
+使用等号来设置一个新的值到列表的第三个元素
+</td>
 
 </tr>
 
@@ -5163,7 +5181,9 @@ assert letters[2..4] == ['C', 'd', 'e']    <i class="conum" data-value="6"></i><
 
 <td><i class="conum" data-value="4"></i><b>4</b></td>
 
-<td>Use the <code>&lt;&lt;</code> leftShift operator to append an element at the end of the list</td>
+<td>
+使用<code>&lt;&lt;</code>左移动操作符添加一个元素到列表的最后
+</td>
 
 </tr>
 
@@ -5171,7 +5191,9 @@ assert letters[2..4] == ['C', 'd', 'e']    <i class="conum" data-value="6"></i><
 
 <td><i class="conum" data-value="5"></i><b>5</b></td>
 
-<td>Access two elements at once, returning a new list containing those two elements</td>
+<td>
+一次访问两个元素，返回一个包含这两个元素的新列表
+</td>
 
 </tr>
 
@@ -5179,7 +5201,9 @@ assert letters[2..4] == ['C', 'd', 'e']    <i class="conum" data-value="6"></i><
 
 <td><i class="conum" data-value="6"></i><b>6</b></td>
 
-<td>Use a range to access a range of values from the list, from a start to an end element position</td>
+<td>
+使用一个从开始到结束元素的位置的范围来访问列表的一个范围内的值。
+</td>
 
 </tr>
 
@@ -5189,7 +5213,9 @@ assert letters[2..4] == ['C', 'd', 'e']    <i class="conum" data-value="6"></i><
 
 <div class="paragraph">
 
-<p>As lists can be heterogeneous in nature, lists can also contain other lists to create multi-dimensional lists:</p>
+<p>
+如列表可以是异构性质的，列表还可以包含其他的列表来创建多维表：
+</p>
 
 </div>
 
@@ -5213,7 +5239,7 @@ assert multi[1][0] == 2          <i class="conum" data-value="2"></i><b>(2)</b><
 
 <td><i class="conum" data-value="1"></i><b>1</b></td>
 
-<td>Define a list of list of numbers</td>
+<td>定义一个以列表作为元素的列表</td>
 
 </tr>
 
@@ -5221,7 +5247,9 @@ assert multi[1][0] == 2          <i class="conum" data-value="2"></i><b>(2)</b><
 
 <td><i class="conum" data-value="2"></i><b>2</b></td>
 
-<td>Access the second element of the top-most list, and the first element of the inner list</td>
+<td>
+访问最上面列表中的第二个元素同时是内部列表中的第一个元素的元素
+</td>
 
 </tr>
 
