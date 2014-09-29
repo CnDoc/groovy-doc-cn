@@ -223,7 +223,7 @@ border-right-color: #333333;border-bottom-color: #333333;border-left-color: #333
 
 							</li>
 
-							<li><a href="groovy_language_specification.html#_booleans">1.1.6. Booleans</a></li>
+							<li><a href="groovy_language_specification.html#_booleans">1.1.6. 布尔值</a></li>
 
 							<li><a href="groovy_language_specification.html#_lists">1.1.7. Lists</a></li>
 
@@ -4885,15 +4885,18 @@ assert    2    **   0.1f instanceof Double     //  1.0717734636432956</code></pr
 
 <div class="paragraph">
 
-<p>Boolean is a special data type that is used to represent truth values: <code>true</code> and <code>false</code>.
-
-Use this data type for simple flags that track true/false <a href="groovy_language_specification.html#_conditional_operators">conditions</a>.</p>
+<p>
+布尔值是用来表示真值的特殊数据类型：<code>true</code>和<code>false</code>。
+可使用这种数据类型，简单地跟踪真/假的<a href="groovy_language_specification.html#_conditional_operators">条件（conditions）</a>。
+</p>
 
 </div>
 
 <div class="paragraph">
 
-<p>Boolean values can be stored in variables, assigned into fields, just like any other data type:</p>
+<p>
+布尔值就像任何其他数据类型一样，可以存储在变量中，可以被指派到到字段，：
+</p>
 
 </div>
 
@@ -4913,17 +4916,18 @@ booleanField = true</code></pre>
 
 <div class="paragraph">
 
-<p><code>true</code> and <code>false</code> are the only two primitive boolean values.
-
-But more complex boolean expressions can be represented using <a href="groovy_language_specification.html#_bitwise_and_logical_operators">logical operators</a>.</p>
+<p>
+<code>true</code>和<code>false</code>是仅有的两个布尔值基元。
+但更复杂的布尔表达式可以使用<a href="groovy_language_specification.html#_bitwise_and_logical_operators">逻辑运算符</a>来表示。 
+</p>
 
 </div>
 
 <div class="paragraph">
 
-<p>In addition, Groovy has <a href="groovy_language_specification.html#_the_groovy_truth">special rules</a> (often referred to as <em>Groovy Truth</em>)
-
-for coercing non-boolean objects to a boolean value.</p>
+<p>
+此外，Groovy中具有强制非布尔对象转化为布尔值的<a href="groovy_language_specification.html#_the_groovy_truth">特殊规则</a>（通常被称为<em>Groovy Truth</em>）。
+</p>
 
 </div>
 
