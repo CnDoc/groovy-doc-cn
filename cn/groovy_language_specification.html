@@ -227,7 +227,7 @@ border-right-color: #333333;border-bottom-color: #333333;border-left-color: #333
 
 							<li><a href="groovy_language_specification.html#_lists">1.1.7. 列表</a></li>
 
-							<li><a href="groovy_language_specification.html#_arrays">1.1.8. Arrays</a></li>
+							<li><a href="groovy_language_specification.html#_arrays">1.1.8. 数组</a></li>
 
 							<li><a href="groovy_language_specification.html#_maps">1.1.9. Maps</a></li>
 
@@ -5261,13 +5261,13 @@ assert multi[1][0] == 2          <i class="conum" data-value="2"></i><b>(2)</b><
 
 <div class="sect3">
 
-<h4 id="_arrays">1.1.8. Arrays</h4>
+<h4 id="_arrays">1.1.8. 数组</h4>
 
 <div class="paragraph">
 
-<p>Groovy reuses the list notation for arrays, but to make such literals arrays,
-
-you need to explicitely define the type of the array through coercion or type declaration.</p>
+<p>
+Groovy中重用列表符号表示数组，但创建这样的文字数组，你需要通过强制或类型声明，明确地定义数组类型。 
+</p>
 
 </div>
 
@@ -5302,7 +5302,9 @@ assert numArr.size() == 3</code></pre>
 
 <td><i class="conum" data-value="1"></i><b>1</b></td>
 
-<td>Define an array of strings using explicit variable type declaration</td>
+<td>
+使用明确的变量类型声明定义一个字符串数组
+</td>
 
 </tr>
 
@@ -5310,7 +5312,7 @@ assert numArr.size() == 3</code></pre>
 
 <td><i class="conum" data-value="2"></i><b>2</b></td>
 
-<td>Assert that we created an array of strings</td>
+<td>断言我们建立了一个字符串数字</td>
 
 </tr>
 
@@ -5318,7 +5320,9 @@ assert numArr.size() == 3</code></pre>
 
 <td><i class="conum" data-value="3"></i><b>3</b></td>
 
-<td>Create an array of ints with the <code>as</code> operator</td>
+<td>
+使用<code>as</code>操作符创建一个int数组
+</td>
 
 </tr>
 
@@ -5326,7 +5330,9 @@ assert numArr.size() == 3</code></pre>
 
 <td><i class="conum" data-value="4"></i><b>4</b></td>
 
-<td>Assert that we created an array of primitive ints</td>
+<td>
+断言我们创建了原始类型的int数组
+</td>
 
 </tr>
 
@@ -5336,7 +5342,7 @@ assert numArr.size() == 3</code></pre>
 
 <div class="paragraph">
 
-<p>You can also create multi-dimensional arrays:</p>
+<p>您还可以创建多维数组:</p>
 
 </div>
 
@@ -5367,7 +5373,7 @@ assert matrix2 instanceof Integer[][]</code></pre>
 
 <td><i class="conum" data-value="1"></i><b>1</b></td>
 
-<td>You can define the bounds of a new array</td>
+<td>你可以定义一个新的数组的边界</td>
 
 </tr>
 
@@ -5375,7 +5381,7 @@ assert matrix2 instanceof Integer[][]</code></pre>
 
 <td><i class="conum" data-value="2"></i><b>2</b></td>
 
-<td>Or declare an array without specifying its bounds</td>
+<td>或声明数组时没有指定界限</td>
 
 </tr>
 
@@ -5385,7 +5391,9 @@ assert matrix2 instanceof Integer[][]</code></pre>
 
 <div class="paragraph">
 
-<p>Access to elements of an array follows the same notation as for lists:</p>
+<p>
+访问数组中的元素遵循与操作列表使用相同的符号：
+</p>
 
 </div>
 
@@ -5414,7 +5422,7 @@ assert names[2] == 'Blackdrag'</code></pre>
 
 <td><i class="conum" data-value="1"></i><b>1</b></td>
 
-<td>Retrieve the first element of the array</td>
+<td>检索数组的第一元素</td>
 
 </tr>
 
@@ -5422,7 +5430,9 @@ assert names[2] == 'Blackdrag'</code></pre>
 
 <td><i class="conum" data-value="2"></i><b>2</b></td>
 
-<td>Set the value of the third element of the array to a new value</td>
+<td>
+设置一个新值到数组的第三个元素
+</td>
 
 </tr>
 
@@ -5443,11 +5453,7 @@ assert names[2] == 'Blackdrag'</code></pre>
 </td>
 
 <td class="content">
-
-Java&#8217;s array initializer notation is not supported by Groovy,
-
-as the curly braces can be misinterpreted with the notation of Groovy closures.
-
+Groovy不支持Java的数组初始符号，而大括号可能被误解为Groovy闭包的符号。
 </td>
 
 </tr>
