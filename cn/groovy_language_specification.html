@@ -239,7 +239,7 @@ border-right-color: #333333;border-bottom-color: #333333;border-left-color: #333
 
 					</li>
 
-					<li><a href="groovy_language_specification.html#groovy-operators">1.2. Operators</a></li>
+					<li><a href="groovy_language_specification.html#groovy-operators">1.2. 运算符</a></li>
 
 					<li>
 
@@ -247,23 +247,17 @@ border-right-color: #333333;border-bottom-color: #333333;border-left-color: #333
 
 							<li><a href="groovy_language_specification.html#_arithmetic_operators">1.2.1.
 
-									Arithmetic operators</a></li>
+									算术运算符</a></li>
 
 							<li>
 
 								<ul class="sectlevel4">
 
-									<li><a href="groovy_language_specification.html#_normal_arithmetic_operators">Normal
+									<li><a href="groovy_language_specification.html#_normal_arithmetic_operators">常见算数运算符</a></li>
 
-											arithmetic operators</a></li>
+									<li><a href="groovy_language_specification.html#_unary_operators">单目运算符</a></li>
 
-									<li><a href="groovy_language_specification.html#_unary_operators">Unary
-
-											operators</a></li>
-
-									<li><a href="groovy_language_specification.html#_assignment_arithmetic_operators">Assignment
-
-											arithmetic operators</a></li>
+									<li><a href="groovy_language_specification.html#_assignment_arithmetic_operators">赋值算术运算符</a></li>
 
 								</ul>
 
@@ -271,23 +265,19 @@ border-right-color: #333333;border-bottom-color: #333333;border-left-color: #333
 
 							<li><a href="groovy_language_specification.html#_relational_operators">1.2.2.
 
-									Relational operators</a></li>
+									关系运算符</a></li>
 
 							<li><a href="groovy_language_specification.html#_logical_operators">1.2.3.
 
-									Logical operators</a></li>
+									逻辑运算符</a></li>
 
 							<li>
 
 								<ul class="sectlevel4">
 
-									<li><a href="groovy_language_specification.html#_precedence">Precedence</a></li>
+									<li><a href="groovy_language_specification.html#_precedence">优先级</a></li>
 
-									<li><a href="groovy_language_specification.html#_short_circuiting_for_code_code">Short-circuiting
-
-											for <code>||</code>
-
-									</a></li>
+									<li><a href="groovy_language_specification.html#_short_circuiting_for_code_code">短路的(<code>||</code>)</a></li>
 
 								</ul>
 
@@ -295,21 +285,19 @@ border-right-color: #333333;border-bottom-color: #333333;border-left-color: #333
 
 							<li><a href="groovy_language_specification.html#_bitwise_operators">1.2.4.
 
-									Bitwise operators</a></li>
+									位运算符</a></li>
 
 							<li><a href="groovy_language_specification.html#_conditional_operators">1.2.5.
 
-									Conditional operators</a></li>
+									条件运算符</a></li>
 
 							<li>
 
 								<ul class="sectlevel4">
 
-									<li><a href="groovy_language_specification.html#_not_operator">Not operator</a></li>
+									<li><a href="groovy_language_specification.html#_not_operator">取反运算符</a></li>
 
-									<li><a href="groovy_language_specification.html#_ternary_operator">Ternary
-
-											operator</a></li>
+									<li><a href="groovy_language_specification.html#_ternary_operator">三目运算符</a></li>
 
 									<li><a href="groovy_language_specification.html#_elvis_operator">Elvis
 
@@ -5801,33 +5789,31 @@ assert !person.containsKey('key')    <i class="conum" data-value="3"></i><b>(3)<
 
 <div class="sect2">
 
-<h3 id="groovy-operators">1.2. Operators</h3>
+<h3 id="groovy-operators">1.2. 运算符</h3>
 
 <div class="paragraph">
 
-<p>This chapter covers the operators of the Groovy programming language.</p>
+<p>本章涵盖了Groovy的所有运算符.</p>
 
 </div>
 
 <div class="sect3">
 
-<h4 id="_arithmetic_operators">1.2.1. Arithmetic operators</h4>
+<h4 id="_arithmetic_operators">1.2.1. 算术运算符</h4>
 
 <div class="paragraph">
 
-<p>Groovy supports the usual familiar arithmetic operators you find in mathematics and in other programming languages like Java.
-
-All the Java arithmetic operators are supported. Let&#8217;s go through them in the following examples.</p>
+<p>Groovy支持在数学和其他编程语言如Java中常见的算术运算符.Java中所有的算术运算符都能够被支持.让我们通过随后的例子来认识他们.</p>
 
 </div>
 
 <div class="sect4">
 
-<h5 id="_normal_arithmetic_operators">Normal arithmetic operators</h5>
+<h5 id="_normal_arithmetic_operators">常见算术运算符</h5>
 
 <div class="paragraph">
 
-<p>The following binary arithmetic operators are available in Groovy:</p>
+<p>下列的二进制算术运算符在Groovy中是有效的:</p>
 
 </div>
 
@@ -5847,11 +5833,11 @@ All the Java arithmetic operators are supported. Let&#8217;s go through them in 
 
 <tr>
 
-<th class="tableblock halign-left valign-top">Operator</th>
+<th class="tableblock halign-left valign-top">运算符</th>
 
-<th class="tableblock halign-left valign-top">Purpose</th>
+<th class="tableblock halign-left valign-top">作用</th>
 
-<th class="tableblock halign-left valign-top">Remarks</th>
+<th class="tableblock halign-left valign-top">备注</th>
 
 </tr>
 
@@ -5863,7 +5849,7 @@ All the Java arithmetic operators are supported. Let&#8217;s go through them in 
 
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>+</code></p></td>
 
-<td class="tableblock halign-left valign-top"><p class="tableblock">addition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">加</p></td>
 
 <td class="tableblock halign-left valign-top"></td>
 
@@ -5873,7 +5859,7 @@ All the Java arithmetic operators are supported. Let&#8217;s go through them in 
 
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>-</code></p></td>
 
-<td class="tableblock halign-left valign-top"><p class="tableblock">substraction</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">减</p></td>
 
 <td class="tableblock halign-left valign-top"></td>
 
@@ -5883,7 +5869,7 @@ All the Java arithmetic operators are supported. Let&#8217;s go through them in 
 
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>*</code></p></td>
 
-<td class="tableblock halign-left valign-top"><p class="tableblock">multiplication</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">乘</p></td>
 
 <td class="tableblock halign-left valign-top"></td>
 
@@ -5893,9 +5879,9 @@ All the Java arithmetic operators are supported. Let&#8217;s go through them in 
 
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>/</code></p></td>
 
-<td class="tableblock halign-left valign-top"><p class="tableblock">division</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">除</p></td>
 
-<td class="tableblock halign-left valign-top"><p class="tableblock">Use <code>intdiv()</code> for integer division, and see the section about <a href="core-syntax.html#integer_division">the integer division</a> for more information on the return type of the division.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>intdiv()</code>用于整数除法，在这里<a href="core-syntax.html#integer_division">the integer division</a>可以看到更多关于除法的返回类型的信息.</p></td>
 
 </tr>
 
@@ -5903,7 +5889,7 @@ All the Java arithmetic operators are supported. Let&#8217;s go through them in 
 
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>%</code></p></td>
 
-<td class="tableblock halign-left valign-top"><p class="tableblock">modulo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">模</p></td>
 
 <td class="tableblock halign-left valign-top"></td>
 
@@ -5913,9 +5899,10 @@ All the Java arithmetic operators are supported. Let&#8217;s go through them in 
 
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>**</code></p></td>
 
-<td class="tableblock halign-left valign-top"><p class="tableblock">power</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"> 幂</p></td>
 
-<td class="tableblock halign-left valign-top"><p class="tableblock">See the section about <a href="core-syntax.html#power_operator">the power operation</a> for more information on the return type of the operation.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">
+在这里<a href="core-syntax.html#power_operator">the power operation</a>可以看到更多关于运算符返回类型的信息.</p></td>
 
 </tr>
 
@@ -5925,7 +5912,7 @@ All the Java arithmetic operators are supported. Let&#8217;s go through them in 
 
 <div class="paragraph">
 
-<p>Here are a few examples of usage of those operators:</p>
+<p>这里有几个使用这些运算符的示例:</p>
 
 </div>
 
@@ -5953,11 +5940,11 @@ assert  2 ** 3 == 8</code></pre>
 
 <div class="sect4">
 
-<h5 id="_unary_operators">Unary operators</h5>
+<h5 id="_unary_operators">一元运算符</h5>
 
 <div class="paragraph">
 
-<p>The <code>+</code> and <code>-</code> operators are also available as unary operators:</p>
+<p><code>+</code>和<code>-</code>也可以用作一元运算符:</p>
 
 </div>
 
@@ -5994,9 +5981,7 @@ assert -(-1) == 1  <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
 
 <div class="paragraph">
 
-<p>In terms of unary arithmetics operators, the <code>+</code>+ (increment) and <code>--</code> (decrement) operators are available,
-
-both in prefix and postfix notation:</p>
+<p>依据一元算术表达式，<code>++</code>(叠加)和<code>--</code>(叠减)是有效的，无论是前缀符号还是后缀符号:</p>
 
 </div>
 
@@ -6047,7 +6032,7 @@ assert g == 3 &amp;&amp; h == 4</code></pre>
 
 <td><i class="conum" data-value="1"></i><b>1</b></td>
 
-<td>The postfix increment will increment <code>a</code> after the expression has been evaluated and assigned into <code>b</code></td>
+<td>后缀<code>++</code>将会在<code>a</code>执行和分配完值到<code>b</code>中之后自增1.</td>
 
 </tr>
 
@@ -6055,7 +6040,7 @@ assert g == 3 &amp;&amp; h == 4</code></pre>
 
 <td><i class="conum" data-value="2"></i><b>2</b></td>
 
-<td>The postfix decrement will decrement <code>c</code> after the expression has been evaluated and assigned into <code>d</code></td>
+<td>后缀<code>--</code>将会在<code>c</code>执行和分配完值到<code>d</code>中之后自减1.</td>
 
 </tr>
 
@@ -6063,7 +6048,7 @@ assert g == 3 &amp;&amp; h == 4</code></pre>
 
 <td><i class="conum" data-value="3"></i><b>3</b></td>
 
-<td>The prefix increment will increment <code>e</code> before the expression is evaluated and assigned into <code>f</code></td>
+<td>前缀<code>++</code>将会在<code>e</code>执行和分配值到<code>f</code>中之前自加1.</td>
 
 </tr>
 
@@ -6071,7 +6056,7 @@ assert g == 3 &amp;&amp; h == 4</code></pre>
 
 <td><i class="conum" data-value="4"></i><b>4</b></td>
 
-<td>The prefix decrement will decrement <code>g</code> before the expression is evaluated and assigned into <code>h</code></td>
+<td>前缀<code>--</code>将会在<code>g</code>执行和分配值到<code>h</code>中之前自减1.</td>
 
 </tr>
 
@@ -6083,11 +6068,11 @@ assert g == 3 &amp;&amp; h == 4</code></pre>
 
 <div class="sect4">
 
-<h5 id="_assignment_arithmetic_operators">Assignment arithmetic operators</h5>
+<h5 id="_assignment_arithmetic_operators">赋值运算符</h5>
 
 <div class="paragraph">
 
-<p>From the binary arithmetic operators we have seen above, certain of them are also available in an assignment form:</p>
+<p>如上所见的二进制算术运算符，如下一些写法同样是有效的：</p>
 
 </div>
 
@@ -6131,7 +6116,7 @@ assert g == 3 &amp;&amp; h == 4</code></pre>
 
 <div class="paragraph">
 
-<p>Let&#8217;s see them in action:</p>
+<p>实际使用示例:</p>
 
 </div>
 
@@ -6188,19 +6173,17 @@ assert e == 1</code></pre>
 
 <div class="sect3">
 
-<h4 id="_relational_operators">1.2.2. Relational operators</h4>
+<h4 id="_relational_operators">1.2.2. 关系运算符</h4>
 
 <div class="paragraph">
 
-<p>Relational operators allow comparisons between objects, to know if two objects are the same or different,
-
-or if one is greater or lower than or equal to the other.</p>
+<p>关系运算符允许对象之间比较，从而知道两个对象是相同还是不同,一个是大于还是小于或等于另一个.</p>
 
 </div>
 
 <div class="paragraph">
 
-<p>The following operators are available:</p>
+<p>下列运算符是有效的:</p>
 
 </div>
 
@@ -6218,9 +6201,9 @@ or if one is greater or lower than or equal to the other.</p>
 
 <tr>
 
-<th class="tableblock halign-left valign-top">Operator</th>
+<th class="tableblock halign-left valign-top">运算符</th>
 
-<th class="tableblock halign-left valign-top">Purpose</th>
+<th class="tableblock halign-left valign-top">作用</th>
 
 </tr>
 
@@ -6232,7 +6215,7 @@ or if one is greater or lower than or equal to the other.</p>
 
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>==</code></p></td>
 
-<td class="tableblock halign-left valign-top"><p class="tableblock">equal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">相等</p></td>
 
 </tr>
 
@@ -6240,7 +6223,7 @@ or if one is greater or lower than or equal to the other.</p>
 
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>!=</code></p></td>
 
-<td class="tableblock halign-left valign-top"><p class="tableblock">different</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">不等</p></td>
 
 </tr>
 
@@ -6248,7 +6231,7 @@ or if one is greater or lower than or equal to the other.</p>
 
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;</code></p></td>
 
-<td class="tableblock halign-left valign-top"><p class="tableblock">less than</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">小于</p></td>
 
 </tr>
 
@@ -6256,7 +6239,7 @@ or if one is greater or lower than or equal to the other.</p>
 
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;=</code></p></td>
 
-<td class="tableblock halign-left valign-top"><p class="tableblock">less than or equal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">小于或等于</p></td>
 
 </tr>
 
@@ -6264,7 +6247,7 @@ or if one is greater or lower than or equal to the other.</p>
 
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>&gt;</code></p></td>
 
-<td class="tableblock halign-left valign-top"><p class="tableblock">greater than</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">大于</p></td>
 
 </tr>
 
@@ -6272,7 +6255,7 @@ or if one is greater or lower than or equal to the other.</p>
 
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>&gt;=</code></p></td>
 
-<td class="tableblock halign-left valign-top"><p class="tableblock">greater than or equal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">大于或等于</p></td>
 
 </tr>
 
@@ -6282,7 +6265,7 @@ or if one is greater or lower than or equal to the other.</p>
 
 <div class="paragraph">
 
-<p>These operators into action in simple number comparisons:</p>
+<p>如下是这些运算符在简单数字上的使用:</p>
 
 </div>
 
@@ -6314,11 +6297,11 @@ assert 5 &gt;= -2</code></pre>
 
 <div class="sect3">
 
-<h4 id="_logical_operators">1.2.3. Logical operators</h4>
+<h4 id="_logical_operators">1.2.3. 逻辑运算符</h4>
 
 <div class="paragraph">
 
-<p>Groovy offers three logical operators for boolean expressions:</p>
+<p>Groovy提供三个boolean值的逻辑运算符:</p>
 
 </div>
 
@@ -6328,19 +6311,19 @@ assert 5 &gt;= -2</code></pre>
 
 <li>
 
-<p><code>&amp;&amp;</code>: logical "and"</p>
+<p><code>&amp;&amp;</code>: 逻辑 "并"</p>
 
 </li>
 
 <li>
 
-<p><code>||</code>: logical "or"</p>
+<p><code>||</code>: 逻辑 "或"</p>
 
 </li>
 
 <li>
 
-<p><code>!</code>: logical "not"</p>
+<p><code>!</code>: 逻辑 "非"</p>
 
 </li>
 
@@ -6350,7 +6333,7 @@ assert 5 &gt;= -2</code></pre>
 
 <div class="paragraph">
 
-<p>Let&#8217;s illustrate them with the following examples:</p>
+<p>让我们举例说明他们的用法:</p>
 
 </div>
 
@@ -6376,7 +6359,7 @@ assert true || false    <i class="conum" data-value="3"></i><b>(3)</b></code></p
 
 <td><i class="conum" data-value="1"></i><b>1</b></td>
 
-<td>"not" false is true</td>
+<td>"非"false即为true</td>
 
 </tr>
 
@@ -6384,7 +6367,7 @@ assert true || false    <i class="conum" data-value="3"></i><b>(3)</b></code></p
 
 <td><i class="conum" data-value="2"></i><b>2</b></td>
 
-<td>true "and" true is true</td>
+<td>true "并" true 仍为 true</td>
 
 </tr>
 
@@ -6392,7 +6375,7 @@ assert true || false    <i class="conum" data-value="3"></i><b>(3)</b></code></p
 
 <td><i class="conum" data-value="3"></i><b>3</b></td>
 
-<td>true "or" false is true</td>
+<td>true "或" false 为 true</td>
 
 </tr>
 
@@ -6402,11 +6385,11 @@ assert true || false    <i class="conum" data-value="3"></i><b>(3)</b></code></p
 
 <div class="sect4">
 
-<h5 id="_precedence">Precedence</h5>
+<h5 id="_precedence">优先级</h5>
 
 <div class="paragraph">
 
-<p>The logical "not" has a higher priority than the logical "and".</p>
+<p>逻辑"非"比逻辑"并"的优先级更高.</p>
 
 </div>
 
@@ -6428,7 +6411,7 @@ assert true || false    <i class="conum" data-value="3"></i><b>(3)</b></code></p
 
 <td><i class="conum" data-value="1"></i><b>1</b></td>
 
-<td>Here, the assertion is true, because "not" has a higher precedence than "and", otherwise, the assertion would have failed</td>
+<td>这里的结果为true，因为"非"比"并"拥有更高的优先级，否则，这个断言将会失败.</td>
 
 </tr>
 
@@ -6438,7 +6421,7 @@ assert true || false    <i class="conum" data-value="3"></i><b>(3)</b></code></p
 
 <div class="paragraph">
 
-<p>The logical "and" has a higher priority than the logical "or".</p>
+<p>逻辑"并"比逻辑"或"拥有更高的优先级.</p>
 
 </div>
 
@@ -6460,7 +6443,7 @@ assert true || false    <i class="conum" data-value="3"></i><b>(3)</b></code></p
 
 <td><i class="conum" data-value="1"></i><b>1</b></td>
 
-<td>Here, the assertion is true, because "and" has a higher precedence than "or", otherwise, the assertion would have failed</td>
+<td>这里的结果为true，因为"并"比"或"拥有更高的优先级，否则，这个断言将会失败.</td>
 
 </tr>
 
@@ -6472,13 +6455,11 @@ assert true || false    <i class="conum" data-value="3"></i><b>(3)</b></code></p
 
 <div class="sect4">
 
-<h5 id="_short_circuiting_for_code_code">Short-circuiting for <code>||</code></h5>
+<h5 id="_short_circuiting_for_code_code">短路的(<code>||</code>)</h5>
 
 <div class="paragraph">
 
-<p>The logical "or" operator is supporting short-circuiting: if the left operand is true, it won&#8217;t evaluate the right operand.
-
-The right operand will be evaluated only if the left operand is false.</p>
+<p>逻辑运算符"或"支持短路：如果左边的操作数为true，那么就不会再验证右边的操作数。只有当左边的操作数为false时右边的操作数才会被验证.</p>
 
 </div>
 
@@ -6519,7 +6500,7 @@ assert called                               <i class="conum" data-value="3"></i>
 
 <td><i class="conum" data-value="1"></i><b>1</b></td>
 
-<td>We create a function that returns its boolean argument, but it sets the <code>called</code> flag</td>
+<td>我们创建一个方法返回boolean类型参数，方法内部设置了<code>called</code>的值.</td>
 
 </tr>
 
@@ -6527,7 +6508,7 @@ assert called                               <i class="conum" data-value="3"></i>
 
 <td><i class="conum" data-value="2"></i><b>2</b></td>
 
-<td>In the first case, we confirm that the function is not called, as <code>||</code> short-circuits the evaluation of the right operand.</td>
+<td>在第一个案例中，刚刚的方法没有被调用，因为<code>||</code>的左边发生了短路.</td>
 
 </tr>
 
@@ -6535,7 +6516,7 @@ assert called                               <i class="conum" data-value="3"></i>
 
 <td><i class="conum" data-value="3"></i><b>3</b></td>
 
-<td>In the second case, the right operand is called, as indicated by the fact our flag is now true</td>
+<td>在第二个案例中，方法被调用了，事实证明flag现在的值为true.</td>
 
 </tr>
 
